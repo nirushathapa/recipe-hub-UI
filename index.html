@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Hub · modern prototype</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header with logo, search, dark toggle -->
+    <header class="header">
+      <div class="logo-area">
+        <i class="fas fa-utensils logo-icon"></i>
+        <span class="logo-text">Recipe Hub</span>
+      </div>
+
+      <div class="header-controls">
+        <div class="search-wrapper">
+          <input type="text" placeholder="Search recipes..." aria-label="Search recipes" id="searchInput">
+          <button aria-label="submit search" id="searchBtn"><i class="fas fa-search"></i></button>
+        </div>
+        <button class="dark-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </header>
+
+   <!-- Featured recipe video section -->
+<section class="featured-video">
+  <h2><i class="fas fa-play-circle" style="color: #e11d48;"></i> Featured Recipe: Creamy Garlic Pasta</h2>
+  <div class="video-placeholder" id="videoContainer">
+    <!-- Custom video thumbnail with play button -->
+    <div class="video-thumbnail">
+      <img src="images/Creamy Garlic Pasta.jpg" alt="Creamy Garlic Pasta" class="thumbnail-img">
+      <div class="play-button">
+        <i class="fas fa-play"></i>
+      </div>
+      <div class="video-duration">7:47</div>
+    </div>
+    
+    <!-- Hidden YouTube iframe (loads only when clicked) -->
+    <div class="video-iframe" id="youtubeIframe" style="display: none;">
+      <iframe id="youtubePlayer" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+    <!-- Recipe grid -->
+    <div class="recipe-grid" id="recipeGrid">
+      <!-- Cards will be populated by JavaScript -->
+    </div>
+
+    <!-- Footer note -->
+    <div class="footnote">
+      <i class="fas fa-heart" style="color: #e11d48;"></i> quick recipes to brighten your day
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
